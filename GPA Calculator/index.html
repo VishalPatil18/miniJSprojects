@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no"/>
+    <!-- TITLE -->
+    <title>What's My GPA?</title>
+    <!-- ICON -->
+    <link rel="shortcut icon" href="images/icon.webp" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="static/bootstrap.min.css">
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+    <div class="container">
+    <div class="row" style="margin-bottom: 5%;">
+        <div class="col-1"></div>
+        <div class="col-10">
+        <div class="card text-center" style="margin-top: 5%;">
+            <div class="card-header"><h2 class="animate__animated animate__flip">What's My GPA?</h2></div>
+            <div class="card-body">
+                <div class="row">
+                    <!-- LEFT HEADING -->
+                    <div class="col-7 animate__animated animate__flipInY">
+                        <div class="whatsmygpa">What's <br> My <br> GPA?</div>
+                    </div>
+                    <!-- LEFT HEADING ENDS -->
+                    <!-- FORM INPUTS -->
+                    <div class="col-5">
+                        <div class="">
+                            <!-- MATHS -->
+                            <div class="form-group">
+                                <label class="" for="exampleFormControlSelect1">Maths</label>
+                                <select class="form-control" id="maths">
+                                    <option>AA</option>
+                                    <option>AB</option>
+                                    <option>BB</option>
+                                    <option>BC</option>
+                                    <option>CC</option>
+                                    <option>CD</option>
+                                    <option>DD</option>
+                                    <option>FF</option>
+                                </select>
+                            </div>
+                            <!-- MACHINES I -->
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">Machines I</label>
+                                <select class="form-control" id="machines">
+                                    <option>AA</option>
+                                    <option>AB</option>
+                                    <option>BB</option>
+                                    <option>BC</option>
+                                    <option>CC</option>
+                                    <option>CD</option>
+                                    <option>DD</option>
+                                    <option>FF</option>
+                                </select>
+                            </div>
+                            <!-- NETWORKS I -->
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">Networks I</label>
+                                <select class="form-control" id="networks">
+                                    <option>AA</option>
+                                    <option>AB</option>
+                                    <option>BB</option>
+                                    <option>BC</option>
+                                    <option>CC</option>
+                                    <option>CD</option>
+                                    <option>DD</option>
+                                    <option>FF</option>
+                                </select>
+                            </div>
+                            <!-- EDC -->
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">EDC</label>
+                                <select class="form-control" id="edc">
+                                    <option>AA</option>
+                                    <option>AB</option>
+                                    <option>BB</option>
+                                    <option>BC</option>
+                                    <option>CC</option>
+                                    <option>CD</option>
+                                    <option>DD</option>
+                                    <option>FF</option>
+                                </select>
+                            </div>
+                            <!-- POWER SYSTEMS -->
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">Power Systems</label>
+                                <select class="form-control" id="powersystems">
+                                    <option>AA</option>
+                                    <option>AB</option>
+                                    <option>BB</option>
+                                    <option>BC</option>
+                                    <option>CC</option>
+                                    <option>CD</option>
+                                    <option>DD</option>
+                                    <option>FF</option>
+                                </select>
+                            </div>
+                            <!-- MACHINES LAB -->
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">Machines Lab</label>
+                                <select class="form-control" id="machineslab">
+                                    <option>AA</option>
+                                    <option>AB</option>
+                                    <option>BB</option>
+                                    <option>BC</option>
+                                    <option>CC</option>
+                                    <option>CD</option>
+                                    <option>DD</option>
+                                    <option>FF</option>
+                                </select>
+                            </div>
+                            <!-- EDC LAB -->
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">EDC LAB</label>
+                                <!-- <p>EDC LAB</p> -->
+                                <select class="form-control" id="edclab">
+                                    <option>AA</option>
+                                    <option>AB</option>
+                                    <option>BB</option>
+                                    <option>BC</option>
+                                    <option>CC</option>
+                                    <option>CD</option>
+                                    <option>DD</option>
+                                    <option>FF</option>
+                                </select>
+                            </div>
+                            <div> 
+                                <input type="button" style="margin-top: 5%; float: right;margin-right: 10%;" name="" value="Show my CGPA" class="btn btn-primary" onclick="calcy()">
+                            </div>            
+                        </div>
+                    </div>
+                    <!-- FORM INPUTS ENDS -->
+                </div>
+                <!-- FINAL RESULT -->
+                <h5 class="card-title" style="margin-top: 2%;">
+                    <p id="showData"></p>
+                </h5>
+                <!-- FINAL RESULT ENDS -->
+            </div>
+
+            <div class="card-footer text-muted">
+                <div class="row">
+                <!-- INSTRUCTIONS MODAL -->
+                <div class="col-3">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#instructionsmodal">Instructions</button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="instructionsmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Instructions</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                            <div class="modal-body" style="text-align: left;">
+                                <ul>
+                                    <li>As of now the user can only find their 3rd Sem Electrical Engineering, VJTI - GPA.</li>
+                                    <li>Please select the grades for each and every subject.</li>
+                                    <li>By default AA is selected as the Grade.</li>
+                                    <li>You are considered pass if your GPA >= 4.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- INSTRUCTIONS MODAL ENDS -->
+                
+                <div class="col-6" style="color: #fff;">
+                    😎Built By @<a class="madeby" href="https://github.com/SpecTEviL" title="SpectEvil's GitHub Repo">SpecTEviL😎</a>
+                </div>
+
+                <!-- ABOUT US MODAL -->
+                <div class="col-3">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#aboutusmodal">About Us</button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="aboutusmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">About Us</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                            <div class="modal-body" id="aboutus">
+                                <div class="row">
+                                    <!-- <div class="col-7">
+                                         <img src="images/aboutus.webp">   
+                                    </div>
+                                    <div class="col-5"> -->
+                                        <p>I'm pursuing B-Tech from VJTI, Mumbai focused in Electrical Engineering. I'm a Developer by Passion. Feel free to connect with me. </p>
+                                        <br>
+                                        <div class="">
+                                            <a class="" href="https://www.instagram.com/_vishal_._lahsiv_/" title="Vishal's Instagram Profile">
+                                                <img src="images/instagram.png" style="width: 100px;">
+                                            </a>
+                                            <a class="" href="https://twitter.com/VishalPatil1810" title="Vishal's Twitter Profile">
+                                                <img src="images/twitter.png" style="width: 100px;">
+                                            </a>
+                                            <a class="" href="https://linkedin.com/in/vishalrameshpatil" title="Vishal's LinkedIn Profile">
+                                                <img src="images/linkedin.png" style="width: 100px;">
+                                            </a>
+                                        </div><br>
+                                        <div class="">
+                                            <a class="" href="mailto:vishalrp18100@gmail.com" target="_blank" title="Mail to Vishal">
+                                                <img src="images/gmail.png" style="width: 100px;">
+                                            </a>
+                                            <a class="" href="https://github.com/SpecTEviL" title="Vishal's GitHub Profile">
+                                                <img src="images/github.png" style="width: 100px;">
+                                            </a>
+                                            <a class="" href="https://www.youtube.com/channel/UCuLhl2ErufGwLFJlHKmBPGA" title="Vishal's Youtube Channel">
+                                                <img src="images/youtube.png" style="width: 100px;">
+                                            </a>
+                                        </div>    
+                                    <!-- </div> -->
+                                
+                                    
+                                </div>
+                                
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ABOUT US MODAL ENDS -->
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="col-1"></div>
+        </div>
+    </div>
+    <!-- SCRIPTS -->
+    <script>$.support.cors = true;</script>
+    <script src="static/jquery.js" crossorigin="anonymous"></script>
+    <script src="static/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="static/script.js"></script> 
+    </body>
+</html>

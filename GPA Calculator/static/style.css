@@ -1,0 +1,97 @@
+  
+/*
+    Dark Blue: #080a52
+    Light Blue: #8aaae5
+    Main Font: Ayuthaya
+    Highlight Font: Righteous
+
+*/
+@font-face {
+    font-family: 'designerregular';
+    src: url('https://SpecTEviL.github.io/GPA-Calculator/fonts/designer_400-webfont.woff2') format('woff2'),
+         url('https://SpecTEviL.github.io/GPA-Calculator/fonts/designer_400-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'ayuthayaregular';
+    src: url('https://SpecTEviL.github.io/GPA-Calculator/fonts/ayuthaya-webfont.woff2') format('woff2'),
+         url('https://SpecTEviL.github.io/GPA-Calculator/fonts/ayuthaya-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    font-family: 'ayuthayaregular';
+    background:#080a52;
+    font-size: 14px;
+    color: #fff;
+}
+
+.card{
+    background: #8aaae5;
+    border-radius: 20px;
+}
+/*.card-header{
+    background: #fff;
+    border-radius: 40px;
+}*/
+/*.card-footer{
+    background: #fff;
+    border-radius: 20px;
+}*/
+.form-control{
+    width: 70px;
+    float: right;
+    margin-right: 10%;
+    background: #080a52;
+    color: #fff;
+}
+.form-group label{
+    font-size: 22px;
+    margin-right: 10px;
+}
+.form-group{
+    text-align: right;
+}
+.col-7{
+    padding-top: 8%;
+    padding-left: 5%;
+}
+.whatsmygpa{
+    text-align: left;
+    /*padding-top: 10%;*/
+    color: #080a52;
+    font-size: 500%;
+    border-left: solid 12px;
+    padding-left: 15px;
+    font-family: 'designerregular';
+}
+.btn-primary{
+    color: #080a52;
+    font-size: 20px;
+    background: #8aaae5;
+    border: solid 2px;
+    border-radius: 10px;
+}
+.btn-primary:hover{
+    color: #fff;
+    font-size: 20px;
+    background: #080a52;
+    border: solid 2px;
+    border-radius: 10px;
+}
+.modal-body{
+    background: #080a52;
+    color: #fff;
+}
+.modal-header{
+    background: #fff;
+    color: #080a52;
+}
+/* #aboutus {
+    width: 150%;
+    height: 150%;
+} */
