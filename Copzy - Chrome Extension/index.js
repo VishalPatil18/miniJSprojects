@@ -1,31 +1,82 @@
-let myLeads = []
+let myTabs = []
 const inputEl = document.getElementById("input-el")
-const inputBtn = document.getElementById("input-btn")
+const saveInputBtn = document.getElementById("save-input-btn")
 const ulEl = document.getElementById("ul-el")
 const deleteBtn = document.getElementById("delete-btn")
-const leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads") )
-const tabBtn = document.getElementById("tab-btn")
+const leadsFromLocalStorage = JSON.parse( localStorage.getItem("myTabs") )
+const saveTabBtn = document.getElementById("save-tab-btn")
+const copyTabBtn = document.getElementById("copy-tab-btn")
+const copyAllBtn = document.getElementById("copy-all-btn")
 
 if (leadsFromLocalStorage) {
-    myLeads = leadsFromLocalStorage
-    render(myLeads)
+    myTabs = leadsFromLocalStorage
+    render(myTabs)
 }
 
-tabBtn.addEventListener("click", function(){    
+// Saving the current Tab in the list
+saveTabBtn.addEventListener("click", function(){   
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
-        myLeads.push(tabs[0].url)
-        localStorage.setItem("myLeads", JSON.stringify(myLeads) )
-        render(myLeads)
+        myTabs.push(tabs[0].url)
+        localStorage.setItem("myTabs", JSON.stringify(myTabs) )
+        render(myTabs)
     })
 })
 
-function render(leads) {
+// Copying the address of current Tab to Clipboard
+copyTabBtn.addEventListener("click", function(){
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+        const link = tabs[0].url;
+        let inputc = document.body.appendChild(document.createElement("input"));
+        inputc.value = link;
+        inputc.focus();
+        inputc.select();
+        document.execCommand('copy');
+        inputc.parentNode.removeChild(inputc);
+        /* Alert the copied text */
+        alert("Copied the Link " + link);
+    })
+})
+
+// Copying all the open Tabs links to Clipboard
+copyAllBtn.addEventListener("click", function(){
+    chrome.tabs.query({}, function(tabs){
+        let link = "";
+        for(let i=0; i<tabs.length; ++i) link += tabs[i].url + "\r\n";
+
+        let inputc = document.body.appendChild(document.createElement("input"));
+        inputc.value = link;
+        inputc.focus();
+        inputc.select();
+        document.execCommand('copy');
+        inputc.parentNode.removeChild(inputc);
+        /* Alert the copied text */
+        alert("Copied the Links\n" + link);
+    })
+})
+
+// Deleting all the Links saved in the list
+deleteBtn.addEventListener("dblclick", function() {
+    localStorage.clear()
+    myTabs = []
+    render(myTabs)
+})
+
+// Adding the current Input to the List of Tabs
+saveInputBtn.addEventListener("click", function() {
+    myTabs.push(inputEl.value)
+    inputEl.value = ""
+    localStorage.setItem("myTabs", JSON.stringify(myTabs) )
+    render(myTabs)
+})
+
+// Functions
+function render(myTabs) {
     let listItems = ""
-    for (let i = 0; i < leads.length; i++) {
+    for (let i = 0; i < myTabs.length; i++) {
         listItems += `
             <li>
-                <a target='_blank' href='${leads[i]}'>
-                    ${leads[i]}
+                <a target='_blank' href='${myTabs[i]}'>
+                    ${myTabs[i]}
                 </a>
             </li>
         `
@@ -33,15 +84,15 @@ function render(leads) {
     ulEl.innerHTML = listItems
 }
 
-deleteBtn.addEventListener("dblclick", function() {
-    localStorage.clear()
-    myLeads = []
-    render(myLeads)
-})
+// About US Modal
+const aboutUsBtn = document.getElementById("about-us-btn");
+const btnCloseModal = document.getElementById("close-modal");
+const modalEl = document.getElementById("about-us-modal");
 
-inputBtn.addEventListener("click", function() {
-    myLeads.push(inputEl.value)
-    inputEl.value = ""
-    localStorage.setItem("myLeads", JSON.stringify(myLeads) )
-    render(myLeads)
-})
+aboutUsBtn.addEventListener("click", function () {
+  modalEl.classList.add("open");
+});
+
+btnCloseModal.addEventListener("click", function () {
+  modalEl.classList.remove("open");
+});

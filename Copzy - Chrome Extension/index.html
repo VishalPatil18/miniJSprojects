@@ -3,12 +3,43 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <input type="text" id="input-el">
-        <button id="input-btn">SAVE INPUT</button>
-        <button id="tab-btn">SAVE TAB</button>
-        <button id="delete-btn">DELETE ALL</button>
-        <ul id="ul-el">
-        </ul>
+        <div style="width: max-content;">
+            <button id="save-tab-btn">SAVE TAB</button>
+            <button id="copy-tab-btn">COPY TAB</button>
+            <button id="copy-all-btn">COPY ALL</button>
+        </div>
+        <input type="text" id="input-el" placeholder="https://www.sample.link.com">
+        <div style="width: max-content;">
+            <button id="save-input-btn">SAVE INPUT</button>
+            <button id="delete-btn">DELETE ALL</button>
+            <button id="about-us-btn">ABOUT US</button>
+        </div>
+
+        <!-- The Modal -->
+        <div id="about-us-modal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-container">
+                <div class="modal-content">
+                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80">
+                    <h2>About Us</h2>
+                    <p>
+                    I'm <a style="color: #f00; margin-bottom: 0px;" href="https://vishalpatil18.github.io/">Vishal Patil</a> an Electrical Engineer from VJTI, Mumbai. I made this extension as a side project for learning purpose.
+                    </p>
+                    <!-- <a href="#!">learn more</a> -->
+                    <p style="margin-top: 10px;">Connect With Me
+                    <a href="https://linkedin.com/in/vishalrameshpatil" target="blank"><img align="center" src="linkedin.svg" alt="Vishal's LinkedIn" height="30" width="30" /></a>
+                    <a href="https://twitter.com/vishalpatil1810" target="blank"><img align="center" src="twitter.svg" alt="Vishal's Twitter" height="30" width="30" /></a>
+                    <a href="https://github.com/VishalPatil18" target="blank"><img align="center" src="github.png" alt="Vishal's Twitter" height="30" width="30" /></a>
+                    <a href="https://medium.com/@vishalrp18100" target="blank"><img align="center" src="medium.svg" alt="Vishal's Medium" height="30" width="30" /></a>
+                    <a href="https://dev.to/vishalpatil1810" target="blank"><img align="center" src="dev_to.svg" alt="Vishal's Dev_to" height="30" width="30" /></a>
+                    </p>
+                </div>
+                <span id="close-modal" class="close-modal">&times;</span>
+            </div>
+        </div>
+        <!-- List of Links -->
+        <ul id="ul-el"></ul>
+
         <script src="index.js"></script>
     </body>
 </html>

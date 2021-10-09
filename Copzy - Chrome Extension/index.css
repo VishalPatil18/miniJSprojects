@@ -1,29 +1,61 @@
-body {
-    margin: 0;
-    padding: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    min-width: 400px;
+/*  Red : 255 106 77    ff6a4d
+    Gray : 67 77 99     434d63
+    Yellow : 249 204 90 f6c959
+*/
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-overflow: ellipsis;
 }
 
-input {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 1px solid #5f9341;
-    margin-bottom: 4px;
+body {
+  min-height: 600px;
+  min-width: 400px;
+  max-width: 554px;
+  margin: 0;
+  padding: 10px;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  font-family: "PT Sans", sans-serif;
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+}
+img {
+  max-width: 100%;
 }
 
 button {
-    background: #5f9341;
-    color: white;
+    background: #f6c959;
+    color: #434d63;
     padding: 10px 20px;
-    border: 1px solid #5f9341;
+    width: 166px;
+    border: 1px solid #f6c959;
     font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s linear;
+}
+
+button:hover {
+    box-shadow: none;
+    background: rgba(255, 255, 255, 0.5);
+    border-color: #fff;
+}
+
+#save-tab-btn, #copy-tab-btn, #save-input-btn{
+    margin-right: 15px;
 }
 
 #delete-btn {
-    background: white;
-    color: #5f9341;
+    margin-right: 15px;
+    background: #ff6a4d;
+    color: #434d63;
 }
 
 ul {
@@ -33,11 +65,95 @@ ul {
 }
 
 li {
+    font-size: 20px;
     margin-top: 5px;
 }
 
 a {
-    color: #5f9341;
+    color: #000;
+    text-decoration: none;
 }
 
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.modal.open {
+  display: flex;
+}
+.modal-container {
+  background-color: #fff;
+  width: 90%;
+  max-width: 450px;
+  position: relative;
+}
+.modal.open .modal-container {
+  animation: move 0.6s ease-out;
+}
+@keyframes move {
+  from {
+    transform: translateY(-50px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
 
+.modal-content > *:not(img) {
+  padding: 0 1rem;
+}
+.modal-content h2 {
+  margin: 1.5rem 0 0.6rem 0;
+}
+.modal-content p {
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+.modal-content a {
+  font-size: 0.8rem;
+  text-decoration: none;
+  padding-bottom: 1rem;
+  display: inline-block;
+}
+.modal-content a:hover {
+  color: salmon;
+}
+
+.close-modal {
+  font-size: 3rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  transition: color 0.15s linear;
+}
+.close-modal:hover {
+  color: #f00;
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    margin: 0px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+input:focus{
+    outline: none;
+    box-shadow: none;
+}
