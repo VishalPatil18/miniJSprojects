@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Space+Mono:ital,wght@1,700&display=swap");
+
+:root {
+  --redColor: #ef476f;
+  --yellowColor: #ffd166;
+  --blueColor: #cbdafa;
+  --darkColor: #2a3141;
+}
+
+* {
+  font-family: "Open Sans", sans-serif;
+  color: var(--blueColor);
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  background-image: linear-gradient(
+    to top,
+    var(--yellowColor),
+    var(--redColor)
+  );
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  max-width: 600px;
+  margin: auto;
+  background-color: var(--darkColor);
+  padding: 2rem;
+}
+
+h1 {
+  font-family: "Space Mono", monospace;
+}
+
+label {
+  display: block;
+  padding-bottom: 0.2rem;
+}
+
+input {
+  width: 150px;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid var(--darkColor);
+  color: var(--darkColor);
+}
+
+#check-btn {
+  margin: 5px;
+  align-self: center;
+  width: 5rem;
+  cursor: pointer;
+  background-color: var(--yellowColor);
+  color: var(--darkColor);
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--darkColor);
+}
+
+#output-box {
+  font-weight: bold;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+}
+
+footer p {
+  color: var(--darkColor);
+  max-width: var(--width-break);
+  margin: auto;
+}
+
+.alert {
+  left: 0px;
+  top: 0px;
+  position: fixed;
+  text-align: center;
+  width: 100vw;
+  margin: auto;
+  background-color: var(--blueColor);
+  padding-bottom: 8px;
+  padding-top: 8px;
+  color: var(--darkColor);
+}
+
+.closebtn {
+  margin-left: 15px;
+  right: 10px;
+  top: 8px;
+  position: fixed;
+  color: var(--redColor);
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
