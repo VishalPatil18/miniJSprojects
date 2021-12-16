@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Space+Mono:ital,wght@1,700&display=swap");
+
+:root {
+  --redColor: #ef476f;
+  --yellowColor: #ffd166;
+  --blueColor: #cbdafa;
+  --darkColor: #2a3141;
+}
+
+* {
+  font-family: "Open Sans", sans-serif;
+  color: var(--blueColor);
+}
+
+body {
+  background-image: linear-gradient(
+    to top,
+    var(--yellowColor),
+    var(--redColor)
+  );
+  height: 98vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  max-width: 600px;
+  margin: auto;
+  background-color: var(--darkColor);
+  padding: 2rem;
+}
+
+.discription {
+  color: var(--blueColor);
+}
+
+.header {
+  color: var(--redColor);
+  font-family: "Space Mono", monospace;
+}
+
+.button {
+  margin: 5px;
+  align-self: center;
+  width: 5rem;
+  cursor: pointer;
+  background-color: var(--yellowColor);
+  border-radius: 0.5rem;
+  color: var(--darkColor);
+  padding: 0.5rem 1rem;
+}
+
+.input {
+  color: var(--darkColor);
+  padding: 1rem 1.5rem;
+}
+
+.cashHide {
+  display: none;
+}
+
+.tableHide {
+  display: none;
+}
+
+caption {
+  padding: 0rem 1rem 1rem 1rem;
+  color: var(--darkColor);
+  tab-size: large;
+  font-weight: bold;
+}
+
+table {
+  border: 1px solid black;
+  font: bold;
+}
+
+table,
+tr,
+td,
+th {
+  align-self: center;
+  padding: 1rem;
+  color: var(--darkColor);
+  background-color: var(--yellowColor);
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+}
+
+footer p {
+  color: var(--darkColor);
+  max-width: var(--width-break);
+  margin: auto;
+}

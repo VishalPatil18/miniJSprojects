@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Bablu Cashier</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="header">BABLU CASHIER</h1>
+      <p class="discription">
+        Enter the total Bill Amount and the Cash given by customer and Bablu will tell the minimun number of notes to return in order to make the payment.
+      </p>
+      <label for="bill-amt">Bill Amount</label>
+      <input class="input" id="bill-amt" placeholder="Enter bill amount here" type="number" />
+      <button class="button" id="next">Next</button>
+      <p id="bill-message"></p>
+      <label class="cashHide title" for="cash-give">Cash given</label>
+      <input class="input cashHide" id="cash-give" placeholder="Enter cash given by you here" type="number" />
+      <button class="button cashHide" id="check-button">Check</button>
+      <p id="cash-message"></p>
+      <table id="table-id" class="table tableHide">
+        <caption class="caption">
+          Return Change
+        </caption>
+        <tr class="tr">
+          <th>No. of Notes</th>
+          <td class="no-of-notes td"></td>
+          <td class="no-of-notes td"></td>
+          <td class="no-of-notes td"></td>
+          <td class="no-of-notes td"></td>
+          <td class="no-of-notes td"></td>
+          <td class="no-of-notes td"></td>
+          <td class="no-of-notes td"></td>
+          <td class="no-of-notes td"></td>
+        </tr>
+        <tr class="tr">
+          <th>Note</th>
+          <td class "td">2000</td>
+          <td class "td">500</td>
+          <td class "td">100</td>
+          <td class "td">50</td>
+          <td class "td">20</td>
+          <td class "td">10</td>
+          <td class "td">5</td>
+          <td class "td">1</td>
+        </tr>
+      </table>
+    </div>
+
+    <footer>
+      <p>Made with ❤️ by <a style="color: black; text-decoration: none; font: bold;" href="https://vishalpatil-neogcamp-acitivity.netlify.app/" target="_blank">Vishal Patil</a></p>
+    </footer>
+  </body>
+  <script src="index.js" type="text/javascript"></script>
+</html>
