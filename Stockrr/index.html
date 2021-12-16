@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stockrr</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="banner">
+      Stockrr
+    </div>
+    <div id="main-app">
+      <form class="form-style">
+        <label class="label-style" for="current-price"
+          >Current Stock Price
+        </label>
+        <input
+          class="input-style"
+          type="number"
+          name="Current Stock Price"
+          id="current-price"
+        />
+        <label class="label-style" for="purchase-price"
+          >Stock Purchase Price
+        </label>
+        <input
+          class="input-style"
+          type="number"
+          name="Stock Purchase Price"
+          id="purchase-price"
+        />
+        <label class="label-style" for="stock-quantity">Stock Quantity </label>
+        <input
+          class="input-style"
+          type="number"
+          name="Stock Quantity"
+          id="stock-quantity"
+        />
+        <button class="check-style" id="check">Check</button>
+      </form>
+      <div id="result" style="display: none">
+        <p id="result-text" class="result-style"></p>
+      </div>
+    </div>
+    <footer>
+      <p>Made with ❤️ by <a style="color: black; text-decoration: none; font: bold;" href="https://vishalpatil-neogcamp-acitivity.netlify.app/" target="_blank">Vishal Patil</a></p>
+    </footer>
+  </body>
+  <script src="script.js"></script>
+</html>

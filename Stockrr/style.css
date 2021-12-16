@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Righteous&display=swap');
+
+:root {
+  --primary-color: #2a3141;
+  --secondary-color: #cbdafa;
+  --redColor: #ef476f;
+  --yellowColor: #ffd166;
+}
+
+* {
+  font-family: 'Playfair Display', serif;
+  color: var(--secondary-color);
+}
+
+body {
+  margin-top: 0;
+  background-image: linear-gradient(
+    to top, #cbdafa, #2a3141
+  );
+  height: 100vh;
+  color: var(--secondary-color);
+}
+
+#banner {
+  font-size: 4rem;
+  font-family: 'Righteous', cursive;
+  color: #cbdafa;
+  margin: auto;
+  text-align: center;
+}
+
+#main-app{
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  border-radius: 2rem;
+  max-width: 600px;
+  margin: auto;
+  background-color: var(--primary-color);
+  padding: 2rem;
+}
+
+label {
+  display: block;
+  padding-bottom: 0.5rem;
+  margin-top: 20px;
+  font-size: 1.3rem;
+}
+
+input {
+  width: 150px;
+  padding: 0.5rem;
+  border: 1px solid var(--darkColor);
+  color: var(--secondary-color);
+}
+
+.input-style {
+  display: block;
+  margin: auto;
+  padding: 0.5rem;
+  background-color: var(--secondary-color);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-align: start;
+  cursor: pointer;
+}
+
+.check-style {
+  margin: 10px;
+  align-self: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: var(--redColor);
+  color: #cbdafa;
+  padding: 0.5rem 1rem;
+  margin-top: 20px;
+  border: none;
+}
+
+.result-style {
+  font-family: 'Righteous', cursive;
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--secondary-color);
+  padding: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+}
+
+footer p, footer p a {
+  font-family: 'Righteous', cursive;
+  color:#2a3141;
+  margin: auto;
+}
