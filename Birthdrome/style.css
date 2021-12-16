@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Space+Mono:ital,wght@1,700&display=swap");
+
+:root {
+  --redColor: #ef476f;
+  --yellowColor: #ffd166;
+  --blueColor: #cbdafa;
+  --darkColor: #2a3141;
+}
+
+* {
+  font-family: "Open Sans", sans-serif;
+  color: var(--blueColor);
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  background-image: linear-gradient(
+    to top,
+    var(--yellowColor),
+    var(--redColor)
+  );
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading{
+  position: fixed;
+  left: 0;
+  top: 10px;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Space Mono", monospace;
+}
+
+#main-app {
+  margin: auto;
+  width: 60vw;
+  text-align: center;
+  background-color: var(--darkColor);
+  padding: 2rem;
+  border-radius: 20px;
+}
+
+.form-style {
+  display: flex;
+  flex-direction: column;
+}
+
+.label-style {
+  color: var(--redColor);
+  font-size: 1.5rem;
+  font-weight: 800;
+  padding-bottom: 1rem;
+}
+
+.input-style {
+  display: block;
+  margin: auto;
+  padding: 0.5rem 1rem;
+  background-color: var(--redColor);
+  border: none;
+  outline: none;
+  text-align: center;
+  font-size: 1.25rem;
+  color: var(--blueColor);
+  cursor: pointer;
+}
+
+.check-style {
+  background-color: var(--yellowColor);
+  color: var(--darkColor);
+  border: none;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  align-self: center;
+  cursor: pointer;
+}
+
+.loading-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  max-width: 50vw;
+}
+
+.result-style {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+}
+
+footer p {
+  color: var(--darkColor);
+  max-width: var(--width-break);
+  margin: auto;
+}

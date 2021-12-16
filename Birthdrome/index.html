@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birthdrome</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="heading">Birthdrome</div>
+    <div id="main-app">
+      <form class="form-style">
+        <label for="birth-date" class="label-style">Enter Your Birth Date</label>
+        <input
+          type="date"
+          name="Birth-Date"
+          id="birth-date"
+          class="input-style"
+        />
+        <button id="check" class="check-style">Check</button>
+      </form>
+      <img
+        src="loading-img.gif"
+        alt="Processing!"
+        id="loading-img"
+        style="display: none"
+        class="loading-img"
+      />
+      <div id="final-result">
+        <p id="result" class="result-style"></p>
+        <p id="tell-palindrome"></p>
+      </div>
+    </div>
+    <footer>
+      <p>Made with ❤️ by <a style="color: black; text-decoration: none; font: bold;" href="https://vishalpatil-neogcamp-acitivity.netlify.app/" target="_blank">Vishal Patil</a></p>
+    </footer>
+  </body>
+  <script src="script.js"></script>
+</html>
